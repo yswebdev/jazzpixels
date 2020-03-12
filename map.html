@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>JazzPixels test</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:image" content="path/to/image.png">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+
+ 
+<main id="main" class="main map-page">
+  <section class="events-map">
+    <div id="map">
+
+    </div>
+
+
+
+
+    <div class="btns">
+      <button id="feed-list-btn" class="btns__item">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" y="15.4" width="20" height="6.6" rx="1" fill="url(#paint0_linear)"/>
+            <rect width="20" height="13.2" rx="1" fill="url(#paint1_linear)"/>
+            <defs>
+            <linearGradient id="paint0_linear" x1="10" y1="15.4" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F66200"/>
+            <stop offset="1" stop-color="#FF971C"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="10" y1="0" x2="10" y2="13.2" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F66200"/>
+            <stop offset="1" stop-color="#FF971C"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        <span id="map-counter" class="counter">0</span>   
+      </button>
+
+      <button class="btns__item"> 
+        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.5 0C2.91246 0 0 2.84906 0 6.35849C0 11.0377 6.5 18 6.5 18C6.5 18 13 11.0377 13 6.35849C13 2.84906 10.0875 0 6.5 0ZM6.5 9.15094C4.9184 9.15094 3.6454 7.90566 3.6454 6.35849C3.6454 4.81132 4.9184 3.56604 6.5 3.56604C8.0816 3.56604 9.3546 4.81132 9.3546 6.35849C9.3546 7.90566 8.06231 9.15094 6.5 9.15094Z" fill="#FF781C"/>
+          </svg>
+                  
+      </button>
+    </div>
+  </section>
+  <section class="feed" id="feed-list">
+    <div class="container">
+      <div class="row heading">
+        <div class="col-12">
+          <h2 id="map-feed-city"></h2>
+          <span  id="map-feed-country"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+
+          <article class="feed__article" data-event-id="1">
+            <div class="img-wrapper">
+              <img src="img/feed-1.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">Surreal soulja 2 </h3>
+              <p>Cashcurt</p>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+              <button class="bookmark gradient">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+                </svg> 
+              </button>
+          </article>
+
+          <article class="feed__article" data-event-id="2">
+            <div class="img-wrapper">
+              <img src="img/feed-2.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">645AR - Workin ft. 10kDug...</h3>
+              <p>Beez Exclusivez</p>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+              <button class="bookmark gradient">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+                </svg> 
+              </button>
+          </article>
+
+          <article class="feed__article size-md" data-event-id="3">
+            <div class="img-wrapper">
+              <img src="img/feed-3.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">Final battle: Issei VS Hong 10 Red Bull BC One..</h3>
+              <span>48:23</span>
+            </div>
+              <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+              <button class="bookmark gradient">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+                </svg> 
+              </button>
+          </article>
+
+          <article class="feed__article size-lg"data-event-id="4">
+            <div class="notice">
+              <p><a href="/">Bboy Event</a> recommends an event</p>
+            </div>
+            <div class="inner">
+              <div class="img-wrapper">
+                <img src="img/feed-4.jpg" alt="">
+              </div>
+              <div class="content-wrapper">
+                <h3 class="title">King or queen of the <br> circle 2018</h3>
+                <p>Houston, United States <br>13 October</p>
+              </div>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+            <button class="bookmark gradient">
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+              </svg> 
+            </button>
+          </article>
+
+          <article class="feed__article" data-event-id="5">
+            <div class="img-wrapper">
+              <img src="img/feed-5.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">kai$oundz & Lil Gucci Le...</h3>
+              <p>kai$oundz</p>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+            <button class="bookmark gradient">
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+              </svg> 
+            </button>
+          </article>
+
+          <article class="feed__article" data-event-id="6">
+            <div class="img-wrapper">
+              <img src="img/feed-1.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">Surreal soulja 2 </h3>
+              <p>Cashcurt</p>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+            <button class="bookmark gradient">
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+              </svg> 
+            </button>
+          </article>
+
+          <article class="feed__article size-md" data-event-id="7">
+            <div class="img-wrapper">
+              <img src="img/feed-6.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+              <h3 class="title">Final battle: Issei VS Hong 10 Red Bull BC One..</h3>
+              <span>48:23</span>
+            </div>
+            <div class="tag">
+              <span class="icon">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="#FF781C"/>
+                </svg>                  
+              </span>
+            </div>
+            <button class="bookmark gradient">
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0.624684C0 0.249873 0.257143 0 0.642857 0H8.35714C8.74286 0 9 0.249873 9 0.624684V9.62013C9 9.99494 8.74286 10.0574 8.48571 9.87L5.01429 7.24633C4.75714 7.05892 4.30714 7.05892 3.98571 7.24633L0.514286 9.87C0.257143 10.1199 0 9.99494 0 9.62013V0.624684Z" fill="white"/>
+              </svg> 
+            </button>
+          </article>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="row content">
+      <div class="col-12">
+        <nav class="nav">
+          <a class="nav__item active " href="index.html">
+            <img class="default" src="img/icon/feeds.svg" alt="feed">
+            <img class="active" src="img/icon/feed-active.svg" alt="feed">
+ 
+          </a>
+          <a class="nav__item " href="map.html"> 
+            <img class="default" src="img/icon/events.svg" alt="events">
+            <img class="active" src="img/icon/events-active.svg" alt="events">
+
+            <span id="events-counter" class="counter">0</span>   
+          </a>
+          <a class="nav__item " href="#">
+            <img class="default" src="img/icon/search.svg" alt="search">
+            <img class="active" src="img/icon/search-active.svg" alt="search">
+                       </a>
+          <a class="nav__item " href="#">
+            <img class="default" src="img/icon/profile.svg" alt="profile">
+            <img class="active" src="img/icon/profile-active.svg" alt="profile">      
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABQvc0u-uGAuAcKwvWC6Ic31O7hTetb6k&language=en"></script>
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
