@@ -1,0 +1,497 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: $accent
+    color: #fff
+
+html
+    font-size: 10px
+
+body
+    font-size: 1.6rem
+    min-width: 320px
+    position: relative
+    line-height: 1.4
+    font-family: $default-font
+    overflow-x: hidden
+    color: #000
+    background-color: #ffffff
+    input, textarea
+        border: #666 1px solid
+        outline: none
+        &:focus:required:invalid
+            border-color: red
+        &:required:valid
+            border-color: green
+    input, textarea, button, a
+        &:active, &:hover, &:focus
+            outline: 0
+            outline-offset: 0
+
+
+b, strong
+    font-weight: bold
+
+input
+    border-radius: 0
+    -webkit-appearance: none
+
+
+a 
+  font-size: 1.6rem
+  color: $orange
+  font-weight: 600
+  &:hover, &:focus
+    color: $orange
+
+
+// Colors
+
+
+$gray: #D5D5D5
+$white: #ffffff
+$line: #2a2a2a
+$bgDark: #151515
+$bgBlack: #000000
+$orange: #FF781C
+
+$gradient1: #FF971C
+$gradient2: #FF6600
+.gradient 
+  background: linear-gradient(26.97deg, $gradient1 20.96%, $gradient2 104.08%)
+
+
+// Scrollbar
+
+/* width */
+::-webkit-scrollbar 
+  width: 1rem
+
+/* Track */
+::-webkit-scrollbar-track 
+  box-shadow: inset 0 0 5px grey
+  border-radius: 0
+
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: linear-gradient(90deg, #FF971C, #FF6600)
+  border-radius: 0
+
+
+
+
+// General
+
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+section
+  padding: 4rem 0  
+
+img 
+  max-width: 100%
+
+
+
+.main
+  margin-bottom: 4.8rem
+
+
+
+h1
+  font-size: 4rem
+  color: $white
+  line-height: 1
+  margin-bottom: 3rem
+h2
+  font-size: 2.6rem
+  color: $white
+  // margin-bottom: 2rem    
+  padding-left: 0.9rem
+  margin-bottom: 3.2rem
+h3 
+  font-size: 1.8rem
+  color: $white
+  font-weight: 900
+p 
+  font-size: 1.6rem
+  color: $gray
+span 
+  font-size: 1.4rem
+  color: $gray
+
+
+// Swiper
+
+.swiper-pagination-bullet
+  width: 0.6rem
+  height: 0.6rem
+  background: #333333
+  transition: 0.3s
+  opacity: 1
+  &.swiper-pagination-bullet-active 
+    background: $orange
+
+
+
+.promo
+  background: $bgBlack
+  min-height: 43.2rem
+  overflow: hidden
+  .swiper-slide
+    display: flex
+    max-width: 95%
+    &:first-of-type
+      .content-wrapper
+        p 
+          line-height: 1
+      .img-wrapper
+        transform: translateX(25%)
+    &.swiper-slide-prev
+      .img-wrapper
+        transform: none
+    &.swiper-slide-active
+      .img-wrapper
+        transform: translateX(25%)
+    &.swiper-slide-next
+      .img-wrapper
+        transform: none
+  .content-wrapper
+    position: absolute
+    bottom: 2rem
+    left: 1.5rem
+    z-index: 2
+    p 
+      font-size: 4rem
+      margin-bottom: 3rem
+      line-height: 1.2
+      font-weight: 900
+      color: $white
+      .value
+        font-size: 6rem
+        color: $white
+
+  .img-wrapper
+    border-radius: 0.8rem
+    overflow: hidden
+    position: relative
+    min-height: 36.8rem
+    // max-width: 22.5rem
+    width: 80%  
+    transition: 0.3s
+    &.no-blackout
+      &:before
+        display: none
+    &:before
+      content: ''
+      position: absolute
+      z-index: 1
+      display: block
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,0.6)
+    img 
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      object-fit: cover
+      width: 100%
+      height: 100%
+  .tag 
+    position: absolute
+    top: 1.7rem
+    left: 1.5rem
+    z-index: 2
+    display: flex
+    align-items: center
+    color: $white
+    font-weight: 600
+    .icon 
+      margin-right: 1rem
+  .swiper-container
+    overflow: visible
+  .swiper-pagination
+    margin-bottom: -4rem
+
+
+
+
+
+.feed
+  background: $bgDark
+  overflow-x: hidden
+  padding-bottom: 0
+  &__article
+    padding: 2.4rem 0
+    position: relative
+    transition: 0.3s
+    &:before
+      content: '' 
+      position: absolute
+      top: 0
+      left: -100%
+      display: block
+      height: 0.1rem
+      width: 200%
+      background: $line
+    &.active
+      animation: 1.5s linear bookmark
+      .tag
+        display: block
+      @keyframes bookmark
+        0%
+          transform: none 
+        20%
+          transform: translateX(12.8rem)
+        80%
+          transform: translateX(12.8rem)
+        100%
+          transform: none
+
+    &.size-md
+      padding: 2.4rem 0 5.6rem
+      .content-wrapper
+        bottom: 1.7rem
+        top: auto 
+        transform: none
+      span 
+        font-size: 1.2rem
+        font-weight: 600
+    &.size-lg
+      padding-left: 0.8rem
+      h3
+        font-size: 2.2rem
+        margin-bottom: 3rem
+  .bookmark
+    position: absolute
+    top: 0
+    left: 0
+    border: none
+    width: 12.8rem
+    height: 100%
+    margin: 0
+    padding: 0
+    transform: translateX(-14.3rem)
+    display: flex
+    justify-content: center
+    align-items: center
+    svg 
+      width: 1.5rem
+      height: 1.7rem
+
+  .notice
+    margin-bottom: 2.4rem
+  .img-wrapper
+    border-radius: 1rem
+    overflow: hidden
+    position: relative
+    max-width: 80%  
+    transition: 0.3s
+    display: inline-block
+    pointer-events: none
+    &.no-blackout
+      &:before
+        display: none
+    &:before
+      content: ''
+      position: absolute
+      z-index: 1
+      display: block
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,0.6)
+  .content-wrapper
+    position: absolute
+    z-index: 2
+    left: 6rem
+    top: 50%
+    transform: translateY(-50%)
+    pointer-events: none
+    p 
+      margin-bottom: 0
+  .inner
+    position: relative
+    pointer-events: none
+  .tag
+    position: absolute
+    top: 2.5rem
+    right: 0rem
+    display: none
+    .icon 
+      display: flex
+
+
+.footer
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 4.8rem
+  background: #000
+  z-index: 3
+
+.nav
+  height: 4.8rem
+  display: flex
+  align-items: flex-end
+  justify-content: space-around
+  padding-bottom: 1.1rem
+  &__item
+    position: relative
+    color: #505050
+    font-size: 1rem
+    .counter
+      position: absolute
+      top: 0
+      left: 1.45rem
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0.5rem
+      min-width: 1.5rem
+      width: auto
+      height: 1.5rem
+      border-radius: 50% 
+      background: linear-gradient(0deg, #2459E2, #2459E2), #2E61E5
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25)
+      color: $white
+      font-size: 0.8rem
+      font-weight: 600
+    .default
+      display: block
+    .active
+      display: none 
+    &.active
+      color: $orange
+      .default
+        display: none
+      .active
+        display: block
+
+#map
+  height: 100%
+
+
+#all-markers
+  & > div
+    overflow: visible !important
+
+  &.active
+    img[src*="marker-active.svg"]
+      animation: pulse .5s infinite alternate
+
+
+@keyframes pulse
+	to 
+		transform: scale(1.25) 
+
+	
+
+
+
+.events-map
+  // background-color: #1d1d1d 
+  width: 100vw
+  height: 100vh 
+  padding: 0
+  // background: url(../img/map.png) center no-repeat
+  // background-size: cover
+  position: relative
+  .btns
+    position: fixed
+    z-index: 10 
+    bottom: 7.2rem
+    left: 2.4rem
+    width: calc(100% - 4.8rem) 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+      background: $bgDark
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25)
+      width: 4.2rem
+      height: 4.2rem
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      border: none
+      svg 
+        pointer-events: none
+      .counter
+        position: absolute
+        top: -0.25rem
+        right: -0.25rem
+        display: flex
+        justify-content: center
+        align-items: center
+        width: auto
+        padding: 0.4rem
+        min-width: 1.5rem
+        height: 1.5rem
+        border-radius: 50%
+        background: linear-gradient(0deg, #2459E2, #2459E2), #2E61E5
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25)
+        color: $white
+        font-size: 0.8rem
+        font-weight: 600
+
+
+
+.map-page
+  position: relative
+  overflow: hidden
+  margin: 0
+  height: 100%
+  &.active
+    overflow: visible
+  .feed
+    position: absolute
+    width: 100%
+    left: 0
+    top: 14rem 
+    border-radius: 2rem 2rem 0 0
+    overflow: visible
+    padding-top: 0
+    transform: translateY(100vh)
+    transition: transform 0.3s
+    margin-bottom: 4.8rem
+    z-index: 10
+    &.active
+      transform: none
+    &__article:first-child
+      &:before
+        display: none
+    .heading
+      position: absolute
+      top: -10rem
+      width: 100%
+      &:after
+        content: '' 
+        position: absolute
+        bottom: 1rem
+        left: 50%
+        transform: translateX(-50%)
+        width: 3.2rem
+        height: 0.3rem
+        border-radius: 5px
+        background: $orange
+      h2 
+        margin-bottom: 1rem
+      span 
+        padding-left: 0.9rem
+        display: block
+        margin-bottom: 3rem
+
+
+@import "media" // Always at the end
